@@ -5,6 +5,8 @@ import { Flex, Image, Box, Text } from '@chakra-ui/react'
 const Navbar: React.FC = () => {
   return (
     <Flex
+      position="sticky"
+      top="0"
       height="100px"
       alignItems="center"
       justifyContent="space-between"
