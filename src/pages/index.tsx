@@ -21,10 +21,10 @@ const Home: React.FC = () => {
         _before={{
           content: `''`,
           display: 'block',
-          width: '20rem',
+          width: '30rem',
           height: '60rem',
           position: 'absolute',
-          right: -50,
+          right: -100,
           bottom: 0,
           backgroundColor: 'hsl(13, 100%, 96%)',
           borderRadius: '30rem',
@@ -194,156 +194,175 @@ const Home: React.FC = () => {
       </Grid>
 
       {/* Reviews */}
-      <Box padding="64px 0" width="90%" margin="0 auto" maxWidth="1200px">
-        <Heading textAlign="center" fontSize="40px" color="hsl(228, 39%, 23%)">
-          What they’ve said
-        </Heading>
-
-        <Grid
-          templateColumns="repeat(3, 1fr)"
-          marginTop="128px"
-          gridColumnGap="32px"
-        >
-          <Box
-            as="article"
-            backgroundColor="hsl(0, 0%, 98%)"
-            px="20px"
-            pb="32px"
-            pt="80px"
-            position="relative"
-            rounded="4px"
+      <Box
+        position="relative"
+        _before={{
+          content: '""',
+          display: 'block',
+          width: '30rem',
+          height: '60rem',
+          backgroundColor: 'hsl(12, 88%, 95%)',
+          position: 'absolute',
+          borderRadius: '30rem',
+          transform: 'rotate(40deg)',
+          left: -300,
+          bottom: -100
+        }}
+      >
+        <Box padding="64px 0" width="90%" margin="0 auto" maxWidth="1200px">
+          <Heading
+            textAlign="center"
+            fontSize="40px"
+            color="hsl(228, 39%, 23%)"
           >
-            <Grid
-              justifyItems="center"
-              position="absolute"
-              top="-80px"
-              left="0"
-              right="0"
-            >
-              <Image src="/images/avatar-anisha.png" alt="" />
-            </Grid>
-            <Box>
-              <Heading
-                textAlign="center"
-                fontSize="16px"
-                color="hsl(228, 39%, 23%)"
-                marginBottom="16px"
-              >
-                Anisha Li
-              </Heading>
-              <Text
-                color="hsl(227, 12%, 61%)"
-                fontWeight="400"
-                fontSize="18px"
-                textAlign="center"
-              >
-                “Manage has supercharged our team’s workflow. The ability to
-                maintain visibility on larger milestones at all times keeps
-                everyone motivated.”
-              </Text>
-            </Box>
-          </Box>
+            What they’ve said
+          </Heading>
 
-          <Box
-            as="article"
-            backgroundColor="hsl(0, 0%, 98%)"
-            px="20px"
-            pb="32px"
-            pt="80px"
-            position="relative"
-            rounded="4px"
+          <Grid
+            templateColumns="repeat(3, 1fr)"
+            marginTop="128px"
+            gridColumnGap="32px"
           >
-            <Grid
-              justifyItems="center"
-              position="absolute"
-              top="-80px"
-              left="0"
-              right="0"
+            <Box
+              as="article"
+              backgroundColor="hsl(0, 0%, 98%)"
+              px="20px"
+              pb="32px"
+              pt="80px"
+              position="relative"
+              rounded="4px"
             >
-              <Image src="/images/avatar-ali.png" alt="" />
-            </Grid>
-            <Box>
-              <Heading
-                textAlign="center"
-                fontSize="16px"
-                color="hsl(228, 39%, 23%)"
-                marginBottom="16px"
+              <Grid
+                justifyItems="center"
+                position="absolute"
+                top="-80px"
+                left="0"
+                right="0"
               >
-                Ali Bravo
-              </Heading>
-              <Text
-                color="hsl(227, 12%, 61%)"
-                fontWeight="400"
-                fontSize="18px"
-                textAlign="center"
-              >
-                “We have been able to cancel so many other subscriptions since
-                using Manage. There is no more cross-channel confusion and
-                everyone is much more focused.”
-              </Text>
+                <Image src="/images/avatar-anisha.png" alt="" />
+              </Grid>
+              <Box>
+                <Heading
+                  textAlign="center"
+                  fontSize="16px"
+                  color="hsl(228, 39%, 23%)"
+                  marginBottom="16px"
+                >
+                  Anisha Li
+                </Heading>
+                <Text
+                  color="hsl(227, 12%, 61%)"
+                  fontWeight="400"
+                  fontSize="18px"
+                  textAlign="center"
+                >
+                  “Manage has supercharged our team’s workflow. The ability to
+                  maintain visibility on larger milestones at all times keeps
+                  everyone motivated.”
+                </Text>
+              </Box>
             </Box>
-          </Box>
 
-          <Box
-            as="article"
-            backgroundColor="hsl(0, 0%, 98%)"
-            px="20px"
-            pb="32px"
-            pt="80px"
-            position="relative"
-            rounded="4px"
-          >
-            <Grid
-              justifyItems="center"
-              position="absolute"
-              top="-80px"
-              left="0"
-              right="0"
+            <Box
+              as="article"
+              backgroundColor="hsl(0, 0%, 98%)"
+              px="20px"
+              pb="32px"
+              pt="80px"
+              position="relative"
+              rounded="4px"
             >
-              <Image src="/images/avatar-richard.png" alt="" />
-            </Grid>
-            <Box>
-              <Heading
-                textAlign="center"
-                fontSize="16px"
-                color="hsl(228, 39%, 23%)"
-                marginBottom="16px"
+              <Grid
+                justifyItems="center"
+                position="absolute"
+                top="-80px"
+                left="0"
+                right="0"
               >
-                Richard Watts
-              </Heading>
-              <Text
-                color="hsl(227, 12%, 61%)"
-                fontWeight="400"
-                fontSize="18px"
-                textAlign="center"
-              >
-                “Manage allows us to provide structure and process. It keeps us
-                organized and focused. I can’t stop recommending them to
-                everyone I talk to!”
-              </Text>
+                <Image src="/images/avatar-ali.png" alt="" />
+              </Grid>
+              <Box>
+                <Heading
+                  textAlign="center"
+                  fontSize="16px"
+                  color="hsl(228, 39%, 23%)"
+                  marginBottom="16px"
+                >
+                  Ali Bravo
+                </Heading>
+                <Text
+                  color="hsl(227, 12%, 61%)"
+                  fontWeight="400"
+                  fontSize="18px"
+                  textAlign="center"
+                >
+                  “We have been able to cancel so many other subscriptions since
+                  using Manage. There is no more cross-channel confusion and
+                  everyone is much more focused.”
+                </Text>
+              </Box>
             </Box>
-          </Box>
-        </Grid>
-        <Flex justifyContent="center" marginTop="48px">
-          <Link href="/">
-            <Text
-              as="a"
-              display="block"
-              background="hsl(12, 88%, 59%)"
-              color="#fff"
-              fontWeight="500"
-              textAlign="center"
-              px={8}
-              py={3}
-              rounded={30}
-              _hover={{ cursor: 'pointer' }}
+
+            <Box
+              as="article"
+              backgroundColor="hsl(0, 0%, 98%)"
+              px="20px"
+              pb="32px"
+              pt="80px"
+              position="relative"
+              rounded="4px"
             >
-              Get Started
-            </Text>
-          </Link>
-        </Flex>
+              <Grid
+                justifyItems="center"
+                position="absolute"
+                top="-80px"
+                left="0"
+                right="0"
+              >
+                <Image src="/images/avatar-richard.png" alt="" />
+              </Grid>
+              <Box>
+                <Heading
+                  textAlign="center"
+                  fontSize="16px"
+                  color="hsl(228, 39%, 23%)"
+                  marginBottom="16px"
+                >
+                  Richard Watts
+                </Heading>
+                <Text
+                  color="hsl(227, 12%, 61%)"
+                  fontWeight="400"
+                  fontSize="18px"
+                  textAlign="center"
+                >
+                  “Manage allows us to provide structure and process. It keeps
+                  us organized and focused. I can’t stop recommending them to
+                  everyone I talk to!”
+                </Text>
+              </Box>
+            </Box>
+          </Grid>
+          <Flex justifyContent="center" marginTop="48px">
+            <Link href="/">
+              <Text
+                as="a"
+                display="block"
+                background="hsl(12, 88%, 59%)"
+                color="#fff"
+                fontWeight="500"
+                textAlign="center"
+                px={8}
+                py={3}
+                rounded={30}
+                _hover={{ cursor: 'pointer' }}
+              >
+                Get Started
+              </Text>
+            </Link>
+          </Flex>
+        </Box>
       </Box>
-
       {/* Simplify */}
       <Box
         backgroundColor="hsl(12, 88%, 59%)"
