@@ -343,6 +343,74 @@ const Home: React.FC = () => {
           </Link>
         </Flex>
       </Box>
+
+      {/* Simplify */}
+      <Box
+        backgroundColor="hsl(12, 88%, 59%)"
+        marginTop="128px"
+        width="100%"
+        overflow="hidden"
+        position="relative"
+        _before={{
+          content: '""',
+          display: 'block',
+          position: 'absolute',
+          top: '-100px',
+          left: '21%',
+          width: '24rem',
+          height: '60rem',
+          backgroundColor: 'hsl(12, 88%, 62%)',
+          borderRadius: '24rem',
+          transform: 'rotate(40deg)',
+          zIndex: 1
+        }}
+        _after={{
+          content: '""',
+          display: 'block',
+          position: 'absolute',
+          top: -180,
+          right: -30,
+          width: '20rem',
+          height: '20rem',
+          backgroundColor: 'hsl(12, 88%, 62%)',
+          borderRadius: '24rem',
+          transform: 'rotate(40deg)',
+          zIndex: 1
+        }}
+      >
+        <Flex
+          padding="64px 0"
+          width="90%"
+          margin="0 auto"
+          maxWidth="1200px"
+          alignItems="center"
+          justifyContent="space-between"
+        >
+          <Box position="relative" zIndex="10">
+            <Heading fontSize="40px" color="#fff" maxWidth="70%">
+              Simplify how your team works today.
+            </Heading>
+          </Box>
+          <Box position="relative" zIndex="10">
+            <Link href="/">
+              <Text
+                as="a"
+                display="block"
+                color="hsl(12, 88%, 59%)"
+                backgroundColor="#fff"
+                fontWeight="700"
+                textAlign="center"
+                px={8}
+                py={3}
+                rounded={30}
+                _hover={{ cursor: 'pointer' }}
+              >
+                Get Started
+              </Text>
+            </Link>
+          </Box>
+        </Flex>
+      </Box>
     </Layout>
   )
 }
