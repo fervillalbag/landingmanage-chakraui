@@ -1,5 +1,14 @@
 import React from 'react'
-import { Box, Grid, Heading, Text, Image, Flex } from '@chakra-ui/react'
+import {
+  Box,
+  Grid,
+  Heading,
+  Text,
+  Image,
+  Flex,
+  Input,
+  Button
+} from '@chakra-ui/react'
 import Link from 'next/link'
 
 import Layout from '../layout'
@@ -363,6 +372,7 @@ const Home: React.FC = () => {
           </Flex>
         </Box>
       </Box>
+
       {/* Simplify */}
       <Box
         backgroundColor="hsl(12, 88%, 59%)"
