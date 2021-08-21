@@ -1,18 +1,23 @@
 import React from 'react'
 import Link from 'next/link'
-import { Flex, Image, Box, Text } from '@chakra-ui/react'
+import { Grid, Flex, Image, Box, Text, Button } from '@chakra-ui/react'
+import { FaTimes } from 'react-icons/fa'
 
 const Navbar: React.FC = () => {
   return (
     <Box maxWidth="1200px" width="90%" margin="0 auto">
-      <Flex
+      <Grid
         position="fixed"
         top="0"
         maxWidth="1200px"
-        width="100%"
-        height="100px"
+        width="90%"
+        margin="0 auto"
         alignItems="center"
-        justifyContent="space-between"
+        height="100px"
+        templateColumns={{
+          base: '1fr max-content',
+          lg: 'max-content 1fr 180px'
+        }}
         zIndex="10"
       >
         <Box>
@@ -22,14 +27,36 @@ const Navbar: React.FC = () => {
             </Text>
           </Link>
         </Box>
-        <Flex justifyContent="center" width="100%">
+        <Flex
+          justifyContent="center"
+          width="100%"
+          flexDirection={{ base: 'column', md: 'row' }}
+          position={{ base: 'fixed', md: 'initial' }}
+          left={{ base: '0', md: 'initial' }}
+          height={{ base: '100vh', md: 'initial' }}
+          backgroundColor={{ base: 'white', md: 'transparent' }}
+          alignItems={{ base: 'center', md: 'initial' }}
+        >
+          <Button
+            display={{ base: 'block', md: 'none' }}
+            position="fixed"
+            right="10px"
+            top="20px"
+            color="hsl(12, 88%, 59%)"
+            backgroundColor="transparent"
+            fontSize="32px"
+          >
+            <FaTimes />
+          </Button>
           <Link href="/">
             <Text
               fontWeight="500"
               color="hsl(228, 39%, 23%)"
               as="a"
               _hover={{ cursor: 'pointer' }}
-              mr={10}
+              mr={{ base: 0, md: 10 }}
+              mb={{ base: 4, md: 0 }}
+              fontSize={{ base: '24px', md: 'initial' }}
             >
               Pricing
             </Text>
@@ -40,7 +67,9 @@ const Navbar: React.FC = () => {
               color="hsl(228, 39%, 23%)"
               as="a"
               _hover={{ cursor: 'pointer' }}
-              mr={10}
+              mr={{ base: 0, md: 10 }}
+              mb={{ base: 4, md: 0 }}
+              fontSize={{ base: '24px', md: 'initial' }}
             >
               Product
             </Text>
@@ -51,7 +80,9 @@ const Navbar: React.FC = () => {
               color="hsl(228, 39%, 23%)"
               as="a"
               _hover={{ cursor: 'pointer' }}
-              mr={10}
+              mr={{ base: 0, md: 10 }}
+              mb={{ base: 4, md: 0 }}
+              fontSize={{ base: '24px', md: 'initial' }}
             >
               About Us
             </Text>
@@ -62,7 +93,9 @@ const Navbar: React.FC = () => {
               color="hsl(228, 39%, 23%)"
               as="a"
               _hover={{ cursor: 'pointer' }}
-              mr={10}
+              mr={{ base: 0, md: 10 }}
+              mb={{ base: 4, md: 0 }}
+              fontSize={{ base: '24px', md: 'initial' }}
             >
               Careers
             </Text>
@@ -73,12 +106,14 @@ const Navbar: React.FC = () => {
               color="hsl(228, 39%, 23%)"
               as="a"
               _hover={{ cursor: 'pointer' }}
+              mb={{ base: 4, md: 0 }}
+              fontSize={{ base: '24px', md: 'initial' }}
             >
               Community
             </Text>
           </Link>
         </Flex>
-        <Box width="200px">
+        <Box display={{ base: 'none', lg: 'block' }}>
           <Link href="/">
             <Text
               as="a"
@@ -95,7 +130,7 @@ const Navbar: React.FC = () => {
             </Text>
           </Link>
         </Box>
-      </Flex>
+      </Grid>
     </Box>
   )
 }
