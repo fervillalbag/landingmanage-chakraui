@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { Grid, Flex, Image, Box, Text, Button } from '@chakra-ui/react'
-import { FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 
 const Navbar: React.FC = () => {
+  const [menuStatus, setMenuStatus] = useState(false)
+
+  const handleToggleMenu = () => setMenuStatus(!menuStatus)
+
   return (
     <Box maxWidth="1200px" width="90%" margin="0 auto">
       <Grid
@@ -18,7 +22,7 @@ const Navbar: React.FC = () => {
           base: '1fr max-content',
           lg: 'max-content 1fr 180px'
         }}
-        zIndex="10"
+        zIndex="20"
       >
         <Box>
           <Link href="/">
@@ -27,6 +31,16 @@ const Navbar: React.FC = () => {
             </Text>
           </Link>
         </Box>
+        <Button
+          display={{ base: 'block', md: 'none' }}
+          color="hsl(228, 39%, 23%)"
+          backgroundColor="transparent"
+          fontSize="24px"
+          _hover={{ backgroundColor: 'transparent' }}
+          onClick={handleToggleMenu}
+        >
+          <FaBars />
+        </Button>
         <Flex
           justifyContent="center"
           width="100%"
@@ -36,18 +50,28 @@ const Navbar: React.FC = () => {
           height={{ base: '100vh', md: 'initial' }}
           backgroundColor={{ base: 'white', md: 'transparent' }}
           alignItems={{ base: 'center', md: 'initial' }}
+          transform={`${menuStatus ? 'translateY(0)' : 'translateY(2000px)'}`}
         >
-          <Button
-            display={{ base: 'block', md: 'none' }}
+          <Flex
+            height="100px"
+            width="90%"
             position="fixed"
-            right="10px"
-            top="20px"
-            color="hsl(12, 88%, 59%)"
-            backgroundColor="transparent"
-            fontSize="32px"
+            top="0"
+            alignItems="center"
+            justifyContent="flex-end"
+            margin="0 auto"
           >
-            <FaTimes />
-          </Button>
+            <Button
+              display={{ base: 'block', md: 'none' }}
+              color="hsl(12, 88%, 59%)"
+              backgroundColor="transparent"
+              fontSize="24px"
+              _hover={{ backgroundColor: 'transparent' }}
+              onClick={handleToggleMenu}
+            >
+              <FaTimes />
+            </Button>
+          </Flex>
           <Link href="/">
             <Text
               fontWeight="500"
