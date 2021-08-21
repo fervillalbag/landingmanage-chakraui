@@ -1,3 +1,5 @@
-module.exports = {
-  reactStrictMode: true
-}
+const widthImages = require('next-images')
+
+module.exports = widthImages({
+  esModule: true
+})

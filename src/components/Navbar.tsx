@@ -50,7 +50,10 @@ const Navbar: React.FC = () => {
           height={{ base: '100vh', md: 'initial' }}
           backgroundColor={{ base: 'white', md: 'transparent' }}
           alignItems={{ base: 'center', md: 'initial' }}
-          transform={`${menuStatus ? 'translateY(0)' : 'translateY(2000px)'}`}
+          transform={{
+            base: `${menuStatus ? 'translateY(0)' : 'translateY(2000px)'}`,
+            md: 'initial'
+          }}
         >
           <Flex
             height="100px"

@@ -1,25 +1,17 @@
 import React from 'react'
-import {
-  Box,
-  Grid,
-  Heading,
-  Text,
-  Image,
-  Flex,
-  Input,
-  Button
-} from '@chakra-ui/react'
+import { Box, Grid, Heading, Text, Image, Flex } from '@chakra-ui/react'
 import Link from 'next/link'
 
+import HeaderIllustration from '../assets/illustration-intro.svg'
 import Layout from '../layout'
-import { Illustration } from '../assets/Illustration'
 
 const Home: React.FC = () => {
   return (
     <Layout>
       {/* Header */}
       <Grid
-        templateColumns="repeat(2, 1fr)"
+        templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }}
+        gridRowGap={{ base: '16px', lg: '0' }}
         maxWidth="1200px"
         width="90%"
         margin="0 auto"
@@ -42,7 +34,10 @@ const Home: React.FC = () => {
         }}
       >
         <Box>
-          <Heading fontSize="56px" color="hsl(228, 39%, 23%)">
+          <Heading
+            fontSize={{ base: '40px', md: '56px' }}
+            color="hsl(228, 39%, 23%)"
+          >
             Bring everyone together to build better products.
           </Heading>
           <Text
@@ -50,12 +45,16 @@ const Home: React.FC = () => {
             fontWeight="400"
             fontSize="18px"
             marginTop="32px"
-            maxWidth="70%"
+            maxWidth={{ base: '100%', lg: '70%' }}
+            textAlign={{ base: 'center', lg: 'left' }}
           >
             Manage makes it simple for software teams to plan day-to-day tasks
             while keeping the larger team goals in view.
           </Text>
-          <Box width="160px" marginTop="32px">
+          <Flex
+            marginTop="32px"
+            justifyContent={{ base: 'center', lg: 'flex-start' }}
+          >
             <Link href="/">
               <Text
                 as="a"
@@ -64,6 +63,7 @@ const Home: React.FC = () => {
                 color="#fff"
                 fontWeight="500"
                 textAlign="center"
+                px={8}
                 py={3}
                 rounded={30}
                 _hover={{ cursor: 'pointer' }}
@@ -71,11 +71,11 @@ const Home: React.FC = () => {
                 Get Started
               </Text>
             </Link>
-          </Box>
+          </Flex>
         </Box>
-        <Box>
+        <Box order={{ base: -1, lg: 'initial' }}>
           <Box>
-            <Illustration />
+            <Image src={HeaderIllustration} width="100%" />
           </Box>
         </Box>
       </Grid>
