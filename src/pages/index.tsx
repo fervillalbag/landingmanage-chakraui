@@ -83,14 +83,19 @@ const Home: React.FC = () => {
 
       {/* Difference */}
       <Grid
-        templateColumns="repeat(2, 1fr)"
+        templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }}
+        gridRowGap={{ base: '48px', lg: '0' }}
         maxWidth="1200px"
         width="90%"
         margin="0 auto"
         padding="64px 0"
       >
         <Box>
-          <Heading fontSize="40px" color="hsl(228, 39%, 23%)">
+          <Heading
+            fontSize="40px"
+            color="hsl(228, 39%, 23%)"
+            textAlign={{ base: 'center', lg: 'left' }}
+          >
             What’s different about Manage?
           </Heading>
           <Text
@@ -98,7 +103,8 @@ const Home: React.FC = () => {
             fontWeight="400"
             fontSize="18px"
             marginTop="32px"
-            maxWidth="70%"
+            maxWidth={{ base: '100%', lg: '70%' }}
+            textAlign={{ base: 'center', lg: 'left' }}
           >
             Manage provides all the functionality your team needs, without the
             complexity. Our software is tailor-made for modern digital product
@@ -109,7 +115,7 @@ const Home: React.FC = () => {
           <Grid
             as="article"
             templateColumns="64px 1fr"
-            gridColumnGap="24px"
+            gridColumnGap={{ base: '14px', lg: '24px' }}
             gridRowGap="12px"
             alignItems="center"
             marginBottom="32px"
@@ -125,11 +131,14 @@ const Home: React.FC = () => {
               01
             </Box>
             <Box>
-              <Heading fontSize="20px" color="hsl(228, 39%, 23%)">
+              <Heading
+                fontSize={{ base: '16px', lg: '20px' }}
+                color="hsl(228, 39%, 23%)"
+              >
                 Track company-wide progress
               </Heading>
             </Box>
-            <Box gridColumn="2/3">
+            <Box gridColumn={{ base: '1/3', lg: '2/3' }}>
               <Text color="hsl(227, 12%, 61%)" fontWeight="400" fontSize="18px">
                 See how your day-to-day tasks fit into the wider vision. Go from
                 tracking progress at the milestone level all the way done to the
@@ -141,7 +150,7 @@ const Home: React.FC = () => {
           <Grid
             as="article"
             templateColumns="64px 1fr"
-            gridColumnGap="24px"
+            gridColumnGap={{ base: '14px', lg: '24px' }}
             gridRowGap="12px"
             alignItems="center"
             marginBottom="32px"
@@ -157,11 +166,14 @@ const Home: React.FC = () => {
               02
             </Box>
             <Box>
-              <Heading fontSize="20px" color="hsl(228, 39%, 23%)">
+              <Heading
+                fontSize={{ base: '16px', lg: '20px' }}
+                color="hsl(228, 39%, 23%)"
+              >
                 Advanced built-in reports
               </Heading>
             </Box>
-            <Box gridColumn="2/3">
+            <Box gridColumn={{ base: '1/3', lg: '2/3' }}>
               <Text color="hsl(227, 12%, 61%)" fontWeight="400" fontSize="18px">
                 Set internal delivery estimates and track progress toward
                 company goals. Our customisable dashboard helps you build out
@@ -172,7 +184,7 @@ const Home: React.FC = () => {
           <Grid
             as="article"
             templateColumns="64px 1fr"
-            gridColumnGap="24px"
+            gridColumnGap={{ base: '14px', lg: '24px' }}
             gridRowGap="12px"
             alignItems="center"
             marginBottom="32px"
@@ -188,11 +200,14 @@ const Home: React.FC = () => {
               03
             </Box>
             <Box>
-              <Heading fontSize="20px" color="hsl(228, 39%, 23%)">
+              <Heading
+                fontSize={{ base: '16px', lg: '20px' }}
+                color="hsl(228, 39%, 23%)"
+              >
                 Everything you need in one place
               </Heading>
             </Box>
-            <Box gridColumn="2/3">
+            <Box gridColumn={{ base: '1/3', lg: '2/3' }}>
               <Text color="hsl(227, 12%, 61%)" fontWeight="400" fontSize="18px">
                 Stop jumping from one service to another to communicate, store
                 files, track tasks and share documents. Manage offers an
