@@ -244,8 +244,13 @@ const Home: React.FC = () => {
           </Heading>
 
           <Grid
-            templateColumns="repeat(3, 1fr)"
+            templateColumns={{
+              base: '1fr',
+              md: 'repeat(2, 1fr)',
+              lg: 'repeat(3, 1fr)'
+            }}
             marginTop="128px"
+            gridRowGap={{ base: '128px', lg: '0' }}
             gridColumnGap="32px"
           >
             <Box
@@ -424,6 +429,7 @@ const Home: React.FC = () => {
         }}
       >
         <Flex
+          flexDirection={{ base: 'column', lg: 'row' }}
           padding="64px 0"
           width="90%"
           margin="0 auto"
@@ -432,11 +438,20 @@ const Home: React.FC = () => {
           justifyContent="space-between"
         >
           <Box position="relative" zIndex="10">
-            <Heading fontSize="40px" color="#fff" maxWidth="70%">
+            <Heading
+              fontSize="40px"
+              color="#fff"
+              maxWidth={{ base: '100%', lg: '70%' }}
+              textAlign={{ base: 'center', lg: 'left' }}
+            >
               Simplify how your team works today.
             </Heading>
           </Box>
-          <Box position="relative" zIndex="10">
+          <Box
+            position="relative"
+            zIndex="10"
+            marginTop={{ base: '32px', lg: '0' }}
+          >
             <Link href="/">
               <Text
                 as="a"
