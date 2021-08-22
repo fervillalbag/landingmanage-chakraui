@@ -37,6 +37,7 @@ const Home: React.FC = () => {
           <Heading
             fontSize={{ base: '40px', md: '56px' }}
             color="hsl(228, 39%, 23%)"
+            textAlign={{ base: 'center', lg: 'left' }}
           >
             Bring everyone together to build better products.
           </Heading>

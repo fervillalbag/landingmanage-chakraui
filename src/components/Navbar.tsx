@@ -42,8 +42,8 @@ const Navbar: React.FC = () => {
           <FaBars />
         </Button>
         <Flex
-          justifyContent="center"
           width="100%"
+          justifyContent="center"
           flexDirection={{ base: 'column', md: 'row' }}
           position={{ base: 'fixed', md: 'initial' }}
           left={{ base: '0', md: 'initial' }}
@@ -56,6 +56,7 @@ const Navbar: React.FC = () => {
           }}
         >
           <Flex
+            display={{ base: 'flex', md: 'none' }}
             height="100px"
             width="90%"
             position="fixed"
